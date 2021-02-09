@@ -6,31 +6,64 @@
         background-color: aqua;
       } */
     </style>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1>DOM Play</h1>
     <div id="clickSpans">
       <p>
-        <span data-actor="hamlet"
-          >Hamlet: To be or not to be,That is the question.</span
+        <span data-actor="computer"
+          >Computer Voice: Imperfect contact - hatch lockout.</span
+        >
+      </p>
+      <p><span data-actor="mann">Dr. Mann: Override.</span></p>
+      <p>
+        <span data-actor="computer"
+          >Computer Voice: Hatch lockout disengaged.</span
+        >
+      </p>
+      <p><span data-actor="cooper">Cooper: Is he locked on?</span></p>
+      <p><span data-actor="case">Case: Imperfectly.</span></p>
+      <p>
+        <span data-actor="cooper"
+          >Cooper: Dr Mann! Dr Mann! Do not, repeat do not attempt to open the
+          hatch! If you -</span
         >
       </p>
       <p>
-        <span data-actor="skull">Skull: Dont ask me. I'm only a skull!</span>
+        <span data-actor="cooper"
+          >Cooper: What happens if he blows the hatch?</span
+        >
       </p>
+      <p><span data-actor="case">Case: Nothing good.</span></p>
+      <p><span data-actor="cooper">Cooper: Pull us back!</span></p>
       <p>
-        <span data-actor="hamlet">Hamlet: What did you say?</span>
-      </p>
-      <p>
-        <span data-actor="skull"
-          >Skull: Nothing. I'm only a figment of your imagination.</span
+        <span data-actor="brand"
+          >Brand: Case, relay my transmission to his onboard computer, and have
+          it rebroadcast as emergency p.a. -</span
         >
       </p>
       <p>
-        <span data-actor="hamlet"
-          >Hamlet: Oh good. I thought I was going crazy!</span
+        <span data-actor="brand">Brand: DR MANN, DO NOT OPEN THE IN--</span>
+      </p>
+      <p>
+        <span data-actor="mann"
+          >Dr. Mann: Brand, I don’t know what Cooper’s told you, but I’m taking
+          control of the Endurance, then we’ll talk about continuing the
+          mission. This is not my survival, or Cooper’s - this is mankind’s
+          -</span
         >
       </p>
+      <a
+        href="http://www.raindance.org/wp-content/uploads/FLFinalSPv1.pdf"
+        target="_blank"
+        >Link to the script can be found here!</a
+      >
     </div>
     <script>
       const spans = document.querySelectorAll("#clickSpans span");
@@ -45,10 +78,10 @@
       function highlightActor(actor) {
         for (const mySpan of spans) {
           if (mySpan.dataset.actor === actor) {
-            mySpan.style.backgroundColor = "yellow";
+            mySpan.style.backgroundColor = "rgb(0, 82, 0)";
             mySpan.style.fontWeight = "bold";
           } else {
-            mySpan.style.backgroundColor = "white";
+            mySpan.style.backgroundColor = "rgb(43, 43, 43)";
             mySpan.style.fontWeight = "normal";
           }
         }
